@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def index():
     return"Welcome to the Commemoro API. Current Version 0.0.1; Author: Maggie"
 
