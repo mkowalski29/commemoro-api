@@ -22,6 +22,7 @@ def saved_locations():
     # POST: Create and Retrieve Locations
     # PUT: Update a saved location
     # DELETE: Remove a saved location
+    return "Locations are also coming soon"
 
 
 
