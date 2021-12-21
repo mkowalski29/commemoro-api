@@ -24,13 +24,6 @@ def saved_locations():
     # DELETE: Remove a saved location
     return "Locations are also coming soon"
 
+app.run(host='0.0.0.0', port=81)
 
-
-
-# Needed Routes
-#1 - Show user profile
-#2 - Show user's saved locations
-#3 - Search for Locations (Maybe)
-#4 - Save a location
-#5 - Delete a location
 
