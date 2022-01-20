@@ -22,7 +22,7 @@ class Location:
             ) as connection:
                 with connection.cursor () as cursor:
                         cursor.execute (get_user_locations_query)
-                        result = cursor.fetchall ()
+                        result = cursor.fetchall()
                         for row in result:
                             print(row)
                             location = {
