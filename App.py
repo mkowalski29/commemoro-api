@@ -1,4 +1,6 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+from user import User
+from location import Location
 
 app = Flask(__name__)
 
@@ -8,22 +10,16 @@ def index():
 
 @app.route('/profile', methods=['GET'])
 def profile():
-    """"Accepts a User Id and returns the users profile"""
-    # Need to define a users profile (Maggie)
-    # GET: Paramater of the User Id
-    # RETURNS: JSON User ID
-    # POST: Create profile
-    # PUT: Allow us to update the users profile
-    return "Profile is coming soon!"
+    id = request.args.get('id')
+    user = User(id)
+    user_profile = user.get_user_profile()
 
 @app.route('/saved_locations', methods=['GET'])
 def saved_locations():
-    """Manages users saved locations"""
-    # POST: Create and Retrieve Locations
-    # PUT: Update a saved location
-    # DELETE: Remove a saved location
-    return "Locations are also coming soon"
+    id = request.args.get('id')
+    locations = Location(id)
+    user_locations = locations.get_saved_locations()
 
-app.run(host='0.0.0.0', port=81)
+    return user_locations
 
 
