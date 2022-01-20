@@ -14,6 +14,8 @@ def profile():
     user = User(id)
     user_profile = user.get_user_profile()
 
+    return user_profile
+
 @app.route('/saved_locations', methods=['GET'])
 def saved_locations():
     id = request.args.get('id')
