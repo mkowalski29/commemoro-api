@@ -8,7 +8,7 @@ from mysql.connector.errors import DatabaseError
 
 
 class User:
-    def _init_(self, id):
+    def __init__(self, id):
         self.id = id
 
     def get_user_profile(self):

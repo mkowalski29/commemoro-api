@@ -7,7 +7,7 @@ from mysql.connector import connection
 from mysql.connector import DatabaseError
 
 class Location:
-    def _init_(self, id):
+    def __init__(self, id):
         self.id = id
 
     def get_saved_locations(self):
