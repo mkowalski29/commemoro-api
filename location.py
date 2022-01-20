@@ -12,7 +12,7 @@ class Location:
 
     def get_saved_locations(self):
         get_user_locations_query = "SELECT id, name, street_address, city, state "\
-                                    "from commemoro.location WHERE user_id {0}".format (self.id)
+                                    "from commemoro.location WHERE user_id {0}".format(self.id)
         user_locations = []
         try:
             with connect (
@@ -21,7 +21,7 @@ class Location:
                 password = "CodeForce2010!!"
             ) as connection:
                 with connection.cursor () as cursor:
-                        cursor.execute (get_user_locations_query)
+                        cursor.execute(get_user_locations_query)
                         result = cursor.fetchall()
                         for row in result:
                             print(row)
